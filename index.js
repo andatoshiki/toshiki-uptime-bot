@@ -58,7 +58,7 @@ const dbPromise = Promise.resolve()
 async function listWatchedSites() {
 	const db = await dbPromise;
 	const sites = await db.all('SELECT * FROM target_sites');
-	let message = 'Currently watched sites:\n\n';
+	let message = 'Currently monitored sites:\n\n';
 
 	sites.forEach(site => {
 		message += `${site.site_url}\n`;
